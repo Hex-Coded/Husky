@@ -35,7 +35,7 @@ namespace Husky
         /// <summary>
         /// Game Addresses & Methods (Asset DB and Asset Pool Sizes) (Some are relative due to ASLR)
         /// </summary>
-        static Dictionary<string, GameDefinition> Games = new Dictionary<string, GameDefinition>()
+        static Dictionary<string, GameDefinition> Games = new Dictionary<string, GameDefinition>(StringComparer.OrdinalIgnoreCase)
         {
             // Call of Duty: World At War
             { "CoDWaWmp",           new GameDefinition(0x8D0958,          0x8D06E8,       "mp",               WorldatWar.ExportBSPData) },
